@@ -23,7 +23,7 @@ int pds_open( char *repo_name, int rec_size ){
         //Build BST and store in pds_bst by reading index entries
         pds_load_ndx();
         fclose(repo_handle.pds_ndx_fp);
-        return PDS_SUCCESS;
+        return PDS_SUCCESS; 
     }
     else{
         printf("Error opening file\n");
@@ -97,12 +97,12 @@ int get_rec_by_non_ndx_key(
             return PDS_FILE_ERROR;
         }
         int temp;
-        (*io_count) = 0;
+        // (*io_count) = 0;
         FILE *fp = repo_handle.pds_data_fp;
         fseek(fp, 0, SEEK_SET);
         while(fread(&temp, sizeof(int), 1, fp)){
             fread(rec, repo_handle.rec_size, 1, fp);
-            (*io_count)++;
+            // (*io_count)++;
             if(matcher(rec, key) == 0){ 
                 struct BST_Node *bst_node = (struct BST_Node*)malloc(sizeof(struct BST_Node));
                 bst_node = bst_search(repo_handle.pds_bst, temp);
