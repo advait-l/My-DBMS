@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-#include "pds.h"
+#include "../dbms/pds.h"
 #include "footballer.h"
 
 int add_footballer( struct Footballer *f){

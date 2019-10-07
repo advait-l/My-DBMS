@@ -3,7 +3,7 @@
 #include<string.h>
 #include<time.h>
 
-#include "pds.h"
+#include "../dbms/pds.h"
 #include "footballer.h"
 
 int id = 0;
