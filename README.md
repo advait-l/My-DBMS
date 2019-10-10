@@ -1,4 +1,4 @@
-# My-DBMS
+# Personal Data Store
 
 A basic implementation of a personal, primitive database management system implemented in C.
 
